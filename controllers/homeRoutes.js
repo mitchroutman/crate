@@ -4,8 +4,10 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
-  const sales = await Sale.findAll({})
-  res.render('homepage');
+  const salesObj = await Sale.findAll({});
+  const sales = salesObj.map((sale) => sale.get({ plain:true }));
+
+  res.render('homepage', {sales});
 });
 
 module.exports = router;

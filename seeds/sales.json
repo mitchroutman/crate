@@ -2,19 +2,19 @@
     {
       "album_name": "Deltron 3030",
       "artist": "Deltron 3030",
-      "Description": "A vintage pressing in terrible condition",
+      "description": "A vintage pressing in terrible condition",
       "user_id": 1
     },
     {
         "album_name": "Black on Both Sides",
         "artist": "Mos Def",
-        "Description": "A fire album but we're all still waiting for BlackStar 2",
+        "description": "A fire album but we're all still waiting for BlackStar 2",
         "user_id": 2
     },
     {
         "album_name": "The Cold Vein",
         "artist": "Cannibal Ox",
-        "Description": "That El-P joint that everybody forgot exists",
+        "description": "That El-P joint that everybody forgot exists",
         "user_id": 1
     }
   ]
