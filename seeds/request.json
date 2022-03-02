@@ -2,19 +2,19 @@
     {
       "album_name": "Dr Octageinocologist",
       "artist": "Dr Octagon",
-      "Description": "One of the many strange kool keith aliases",
+      "description": "One of the many strange kool keith aliases",
       "user_id": 1
     },
     {
         "album_name": "Black Star",
         "artist": "Black Star",
-        "Description": "The Classic",
+        "description": "The Classic",
         "user_id": 2
     },
     {
         "album_name": "Enter the 36 Chambers",
         "artist": "Wu-Tang",
-        "Description": "Aw yeaaaaa, again and again",
+        "description": "Aw yeaaaaa, again and again",
         "user_id": 1
     }
   ]

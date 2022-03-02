@@ -1,1 +1,13 @@
 <h1>Welcome to the Dusty Jacket homepage</h1>
+
+{{#each sales as |sale|}}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{album_name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{artist}}</h6>
+    <p class="card-text">{{description}}</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+{{/each}}
