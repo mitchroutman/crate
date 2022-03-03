@@ -1,13 +1,13 @@
 <h1 style="text-align: center"> Seeking </h1>
 
-{{#each sales as |sale|}}
+{{#each seeks as |seek|}}
 <div class="card my-4">
   <div class="card-body">
     <h5 class="card-title">{{album_name}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{artist}}</h6>
     <p class="card-text">{{description}}</p>
     <p class="card-text">{{user.name}}</p>
-    <button class="btn btn-secondary">View</button>
+    <a href="/seek/{{id}}" class="btn btn-secondary">View</a>
     {{!-- <a href="#" class="card-link">Another link</a> --}}
   </div>
 </div>

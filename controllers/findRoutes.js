@@ -8,8 +8,22 @@ router.get('/', async (req, res) => {
   res.render('find', {sales});
 })
 
+router.get('/:id', async (req, res) => {
+    id = req.params.id;
+    const saleObj = await Sale.findOne({where: { id }}) 
+    const sale = saleObj.get({ plain:true })
+    console.log(sale)
+    res.render('single-find', {sale})
+})
+
 router.get('/new', (req, res) => {
     res.render('find-new')
+})
+
+router.get('/update/:id', async (req, res) => {
+    const findUpdate = await Sale.findOne({where: { id: req.params.id }})
+    const find = findUpdate.get({ plain: true })
+    res.render('find-update', {find})
 })
 
 router.post('/new', (req, res) => {
@@ -25,6 +39,26 @@ router.post('/new', (req, res) => {
     .catch((err) => {
         res.status(500).json(err)
     })
+})
+
+router.put('/update/:id', async (req, res) => {
+    const id = req.params.id
+    await Sale.update({
+        album_name: req.body.album,
+        artist: req.body.artist,
+        description: req.body.description,
+    },{
+        where: {
+            id: req.params.id
+        }
+    })
+    res.redirect(`/find/${id}`)
+})
+
+router.delete('/:id', async (req, res) => {
+    await Sale.destroy({ where: { id:req.params.id }
+    });
+    res.redirect('/find')
 })
 
 module.exports = router;

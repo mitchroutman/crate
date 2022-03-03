@@ -3,11 +3,11 @@ const session = require('express-session');
 const exphbs =  require('express-handlebars');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false }));
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 
