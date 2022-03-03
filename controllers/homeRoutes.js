@@ -1,4 +1,4 @@
-const { Sale } = require('../models');
+const { Sale, Request } = require('../models');
 
 const router = require('express').Router();
 
@@ -7,7 +7,10 @@ router.get('/', async (req, res) => {
   const salesObj = await Sale.findAll({});
   const sales = salesObj.map((sale) => sale.get({ plain:true }));
 
-  res.render('homepage', {sales});
+  const reqObj = await Request.findAll({});
+  const requests = reqObj.map((request) => request.get({ plain:true }));
+
+  res.render('homepage', {sales, requests});
 });
 
 module.exports = router;
