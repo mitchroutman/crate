@@ -1,6 +1,20 @@
-<h1 class="ml-4">Albums for Sale</h1>
+<h1>Dig Thru</h1>
 
 {{#each sales as |sale|}}
+<div class="card my-4">
+  <div class="card-body">
+    <h5 class="card-title">{{album_name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{artist}}</h6>
+    <p class="card-text">{{description}}</p>
+    <button class="btn btn-secondary">View</button>
+    {{!-- <a href="#" class="card-link">Another link</a> --}}
+  </div>
+</div>
+{{/each}}
+
+<h1>Lookin for new</h1>
+
+{{#each requests as |request|}}
 <div class="card my-4">
   <div class="card-body">
     <h5 class="card-title">{{album_name}}</h5>
