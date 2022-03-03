@@ -7,16 +7,16 @@ router.get('/', async (req, res) => {
   res.render('seek', {seeks});
 })
 
+router.get('/new', (req, res) => {
+    res.render('seek-new')
+})
+
 router.get('/:id', async (req, res) => {
     id = req.params.id;
     const seekObj = await Request.findOne({where: { id }}) 
     const seeks = seekObj.get({ plain:true })
     console.log(seeks)
     res.render('single-seek', {seeks})
-})
-
-router.get('/new', (req, res) => {
-    res.render('seek-new')
 })
 
 router.get('/update/:id', async (req, res) => {
