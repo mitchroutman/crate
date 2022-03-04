@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
 })
 
 // localhost:3001/seek/update/:id
-router.get('/update/:id', async (req, res) => {
+router.get('/update/:id', withAuth, async (req, res) => {
     const seekUpdate = await Request.findOne({where: { id: req.params.id }})
     const seek = seekUpdate.get({ plain: true })
     res.render('seek-update', {seek})
