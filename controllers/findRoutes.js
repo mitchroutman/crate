@@ -1,4 +1,5 @@
 const { Request, User, Sale } = require('../models/');
+const withAuth = require('../utils/auth');
 const router = require('express').Router();
 
 // GET
@@ -12,7 +13,7 @@ router.get('/', async (req, res) => {
 })
 
 // localhost:3001/find/new -- MAKE A 'SALE' POST: this is the form page.
-router.get('/new', (req, res) => {
+router.get('/new', withAuth, (req, res) => {
     res.render('find-new')
 });
 
@@ -55,7 +56,7 @@ router.post('/new', (req, res) => {
 // PUT
 
 // localhost:3001/find/update/:id
-router.put('/update/:id', async (req, res) => {
+router.put('/update/:id', withAuth, async (req, res) => {
     const id = req.params.id
     await Sale.update({
         album_name: req.body.album,
@@ -73,7 +74,7 @@ router.put('/update/:id', async (req, res) => {
 // DELETE
 
 // localhost:3001/find/:id
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
     await Sale.destroy({ where: { id:req.params.id }
     });
     res.redirect('/find')

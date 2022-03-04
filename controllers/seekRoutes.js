@@ -1,5 +1,6 @@
 const { Request, User, Sale } = require('../models/');
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 
 // GET
 
@@ -11,7 +12,7 @@ router.get('/', async (req, res) => {
 })
 
 // localhost:3001/seek/new -- MAKE A NEW 'SEEK' POST: form page.
-router.get('/new', (req, res) => {
+router.get('/new', withAuth, (req, res) => {
     res.render('seek-new')
 })
 
@@ -54,7 +55,7 @@ router.post('/new', (req, res) => {
 // PUT
 
 // localhost:3001/seek/update/:id
-router.put('/update/:id', async (req, res) => {
+router.put('/update/:id', withAuth, async (req, res) => {
     const id = req.params.id
     await Request.update({
         album_name: req.body.album,
@@ -72,7 +73,7 @@ router.put('/update/:id', async (req, res) => {
 // DELETE
 
 // localhost:3001/seek/:id
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
     await Request.destroy({ where: { id:req.params.id }
     });
     res.redirect('/seek')
