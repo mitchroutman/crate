@@ -2,7 +2,7 @@
     <div class="card-body">
       <h5 class="card-title">{{sale.album_name}}</h5>
       <h6 class="card-subtitle mb-2 text-muted">{{sale.artist}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted">User</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{sale.user.name}}</h6>
       <p class="card-text">{{sale.description}}</p>
       <a href="/find" class="btn btn-secondary">back</a>
       <form action="update/{{sale.id}}" method="GET" class="d-inline">
