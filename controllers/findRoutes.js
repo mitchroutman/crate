@@ -27,7 +27,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // localhost:3001/find/update/:id
-router.get('/update/:id', async (req, res) => {
+router.get('/update/:id', withAuth, async (req, res) => {
     const findUpdate = await Sale.findOne({where: { id: req.params.id }})
     const find = findUpdate.get({ plain: true })
     res.render('find-update', {find})
