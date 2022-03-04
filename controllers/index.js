@@ -9,5 +9,4 @@ router.use('/find', findRoutes);
 router.use('/seek', seekRoutes);
 router.use('/user', userRoutes);
 
-
 module.exports = router;

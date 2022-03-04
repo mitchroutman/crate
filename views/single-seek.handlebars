@@ -3,7 +3,7 @@
     <div class="card-body">
       <h5 class="card-title">{{seeks.album_name}}</h5>
       <h6 class="card-subtitle mb-2 text-muted">{{seeks.artist}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted">User</h6>
+      <h6 class="card-subtitle mb-2 text-muted">{{seeks.user.name}}</h6>
       <p class="card-text">{{seeks.description}}</p>
       <a href="/seek" class="btn btn-secondary">back</a>
       <form action="update/{{seeks.id}}" method="GET" class="d-inline">
