@@ -16,7 +16,7 @@ router.get('/register', (req, res) => {
 
 //register new user in db
 router.post('/register', async (req, res) => {
-    console.log(req.session)
+    //console.log(req.session)
     try {
         const newUser = await User.create({
             name: req.body.name,
@@ -77,8 +77,8 @@ router.post('/login', async (req, res) => {
 
 //logout
 router.post('/logout', (req, res) => {
-    console.log('hit post route');
-    console.log(req.session);
+    //console.log('hit post route');
+    //console.log(req.session);
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             //res.status(204).json({ message: 'Logged out' }).end();

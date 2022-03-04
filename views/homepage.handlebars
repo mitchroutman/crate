@@ -1,3 +1,7 @@
+{{#if loggedIn}}
+<h1>Welcome Back {{username}}, you're logged in</h1>
+{{/if}}
+
 <h1>Dig Thru</h1>
 
 {{#each sales as |sale|}}
@@ -6,6 +10,8 @@
     <h5 class="card-title">{{album_name}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{artist}}</h6>
     <p class="card-text">{{description}}</p>
+    <p class="card-text">{{user.name}}</p>
+    <p class="card-text">{{format_date createdAt}}</p>
     <a href="/find/{{id}}" class="btn btn-secondary">View</a>
     {{!-- <a href="#" class="card-link">Another link</a> --}}
   </div>
@@ -20,6 +26,8 @@
     <h5 class="card-title">{{album_name}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{artist}}</h6>
     <p class="card-text">{{description}}</p>
+    <p class="card-text">{{user.name}}</p>
+    <p class="card-text">{{format_date createdAt}}</p>
     <a href="find/{{id}}" class="btn btn-secondary">View</a>
     {{!-- <a href="#" class="card-link">Another link</a> --}}
   </div>
