@@ -28,16 +28,19 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/seek">Seek</a>
                     </li>
+                    {{#if loggedIn}}
+                    <li class="nav-item active">
+                        <form action="/user/logout" method="POST">
+                            <button type="submit" class="nav-link" id="logout-link">Logout</button>
+                        </form>
+                    </li>
+                    {{else }}
                     <li class="nav-item active">
                         <a class="nav-link" href="/user/login">Login</a>
                     </li>
+                    {{/if}}
                     <li class="nav-item active">
                         <a class="nav-link" href="/user/register">Register</a>
-                    </li>
-                     <li class="nav-item active">
-                         <form action="/user/logout" method="POST">
-                            <button type="submit" class="nav-link" id="logout-link">Logout</button>
-                        </form>
                     </li>
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
