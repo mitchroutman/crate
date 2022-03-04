@@ -1,7 +1,9 @@
 const { Sale, Request } = require('../models');
-
 const router = require('express').Router();
 
+// GET
+
+// localhost:3001
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   const salesObj = await Sale.findAll({});
@@ -12,5 +14,6 @@ router.get('/', async (req, res) => {
 
   res.render('homepage', {sales, requests});
 });
+
 
 module.exports = router;
