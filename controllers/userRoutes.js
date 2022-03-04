@@ -29,11 +29,12 @@ router.post('/register', async (req, res) => {
             req.session.username = newUser.name;
             req.session.loggedIn = true;
 
-            res.json(newUser);
+            //res.json(newUser);
+            res.redirect('/');
         });
     } catch (err) {
         //res.status(500).json(err);
-        res.redirect('404');
+        res.redirect('/404');
     }
 });
 
@@ -48,7 +49,7 @@ router.post('/login', async (req, res) => {
         
         if (!user) {
             //res.status(400).json({ message: 'You aint got no account!' });
-            res.redirect('404');
+            res.redirect('/404');
             return;
         } 
 
@@ -56,7 +57,7 @@ router.post('/login', async (req, res) => {
 
         if (!validPassword) {
             //res.status(400).json({ message: 'Incorrect password' });
-            res.redirect('404');
+            res.redirect('/404');
             return;
         }
 
@@ -70,7 +71,7 @@ router.post('/login', async (req, res) => {
         });
     } catch (err) {
         //res.status(400).json({ message: 'No user found' });
-        res.redirect('404');
+        res.redirect('/404');
     }
 });
 
@@ -86,7 +87,7 @@ router.post('/logout', (req, res) => {
         });
     } else {
         //res.status(404).end()
-        res.redirect('404');
+        res.redirect('/404');
     };
 });
 

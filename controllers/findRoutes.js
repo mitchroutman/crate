@@ -39,7 +39,7 @@ router.get('/update/:id', withAuth, async (req, res) => {
 // localhost:3001/find/new
 router.post('/new', (req, res) => {
     Sale.create({
-        user_id: 1,
+        user_id: req.session.userId,
         album_name: req.body.album,
         artist: req.body.artist,
         description: req.body.description
