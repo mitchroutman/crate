@@ -41,7 +41,8 @@ router.post('/new', (req, res) => {
         user_id: req.session.userId,
         album_name: req.body.album,
         artist: req.body.artist,
-        description: req.body.description
+        description: req.body.description,
+        photo: req.body.img
     })
     .then((newSeek) => {
         res.redirect('/seek')

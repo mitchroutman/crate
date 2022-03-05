@@ -3,18 +3,28 @@
       "album_name": "Dr Octageinocologist",
       "artist": "Dr Octagon",
       "description": "One of the many strange kool keith aliases",
+      "photo": "https://img.discogs.com/bVzLvepJvSp1lS_2CGaF4H6aM4Y=/fit-in/600x579/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-10334222-1510671240-8820.jpeg.jpg",
       "user_id": 1
     },
     {
         "album_name": "Black Star",
         "artist": "Black Star",
         "description": "The Classic",
+        "photo": "https://upload.wikimedia.org/wikipedia/en/3/33/MosDef%26TalibKweliBlackStar.jpg",
         "user_id": 2
     },
     {
         "album_name": "Enter the 36 Chambers",
         "artist": "Wu-Tang",
         "description": "Aw yeaaaaa, again and again",
+        "photo": "https://upload.wikimedia.org/wikipedia/en/5/53/Wu-TangClanEntertheWu-Tangalbumcover.jpg",
         "user_id": 1
+    },
+    {
+      "album_name": "Rumors",
+      "artist": "Fleetwood Mac",
+      "description": "You know it",
+      "photo": "https://m.media-amazon.com/images/I/71BekDJBb3L._SL1425_.jpg",
+      "user_id": 1
     }
   ]

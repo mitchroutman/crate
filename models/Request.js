@@ -22,6 +22,9 @@ Request.init(
     description: {
         type: DataTypes.TEXT,
     },
+    photo: {
+      type: DataTypes.STRING,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
