@@ -23,7 +23,7 @@ Sale.init(
         type: DataTypes.TEXT,
     },
     photo: {
-        type: DataTypes.BLOB,
+        type: DataTypes.STRING,
     },
     audio: {
         type: DataTypes.BLOB,

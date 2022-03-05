@@ -3,18 +3,21 @@
       "album_name": "Deltron 3030",
       "artist": "Deltron 3030",
       "description": "A vintage pressing in terrible condition",
+      "photo": "https://upload.wikimedia.org/wikipedia/en/7/7e/Deltron_3030_%28album_cover%29.jpg",
       "user_id": 1
     },
     {
         "album_name": "Black on Both Sides",
         "artist": "Mos Def",
         "description": "A fire album but we're all still waiting for BlackStar 2",
+        "photo": "https://m.media-amazon.com/images/I/61A-tGJmm2L._SL1200_.jpg",
         "user_id": 2
     },
     {
         "album_name": "The Cold Vein",
         "artist": "Cannibal Ox",
         "description": "That El-P joint that everybody forgot exists",
+        "photo": "https://upload.wikimedia.org/wikipedia/en/f/fd/CannibalOxTheColdVein.jpg",
         "user_id": 1
     }
   ]
