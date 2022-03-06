@@ -1,4 +1,4 @@
-const { Request, User, Sale } = require('../models/');
+const { Request, User, Sale, Comment } = require('../models/');
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
@@ -24,8 +24,16 @@ router.get('/:id', async (req, res) => {
     const seekObj = await Request.findOne({where: { id }, include: [{ model: User}]}) 
     const seek = seekObj.get({ plain:true })
     const loggedIn = req.session.loggedIn;
-    // console.log(seeks)
-    res.render('single-seek', {seek, loggedIn})
+    // GET COMMENTS
+    const commentObj = await Comment.findAll({where: {request_id: id}, include: [{ model: User}], order: [["id", "DESC"]]});
+    const comments = commentObj.map((comment) => comment.get({ plain: true }))
+    console.log(comments.length)
+    let showComment = false
+    if (comments.length > 0) {
+        showComment = true
+    }
+
+    res.render('single-seek', {seek, loggedIn, comments, showComment})
 })
 
 // localhost:3001/seek/update/:id
@@ -56,6 +64,17 @@ router.post('/new', (req, res) => {
     })
 })
 
+//POST route for comments
+
+router.post('/comment/:id', withAuth, async (req, res) => {
+    console.log(req.body.comment)
+    await Comment.create({
+        comment: req.body.comment,
+        user_id: req.session.userId,
+        request_id: req.params.id,
+    });
+    res.redirect(`/seek/${req.params.id}`)
+})
 
 // PUT
 
@@ -66,6 +85,7 @@ router.put('/update/:id', withAuth, async (req, res) => {
         album_name: req.body.album,
         artist: req.body.artist,
         description: req.body.description,
+        photo: req.body.img
     },{
         where: {
             id: req.params.id
