@@ -1,21 +1,25 @@
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">{{sale.album_name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{sale.artist}}</h6>
-    <h6 class="card-subtitle mb-2 text-muted">{{sale.user.name}}</h6>
-    <div>
-      <p><img src="{{sale.photo}}" alt="description"/></p>
+<div class="container py-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-6 my-3">
+      <img id="detail-pg-img" class="img-fluid" src="{{sale.photo}}" alt="alt" />
+      <h4 class="my-2">{{sale.album_name}}</h4>
+      <h5>{{sale.artist}}</h5>
+      <form action="update/{{sale.id}}" method="GET" class="d-inline">
+        <button class="btn btn-link link">edit</button>
+      </form>
+      <form action="/find/{{sale.id}}?_method=DELETE" method="POST" class="d-inline">
+        <button class="btn btn-link delete-link">delete</button>
+      </form>
     </div>
-    <p class="card-text">{{sale.description}}</p>
-    <a href="/find" class="btn btn-secondary">back</a>
-    <form action="update/{{sale.id}}" method="GET" class="d-inline">
-      <button class="btn btn-info">Edit</button>
-    </form>
-    <form action="/find/{{sale.id}}?_method=DELETE" method="POST" class="d-inline">
-      <button class="btn btn-danger">Delete</button>
-    </form>
+    <div class="col-lg-5 col-md-6 my-3 py-3">
+      <p>{{sale.description}}</p>
+      <p>posted by {{sale.user.name}}</p>
+      <p>on {{format_date sale.createdAt}}</p>
+    </div>
   </div>
 </div>
+
+{{!-- use another row for comments. each comment is a col.--}}
 
 {{!-- {{#each comments as |comment|}}
 <div class="card">

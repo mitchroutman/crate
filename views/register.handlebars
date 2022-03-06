@@ -1,24 +1,23 @@
-<h1 style="text-align: center;"> Register </h1>
-<form action="/user/register" method="POST">
-    <div class="container">
-    <div class="container">
-        <div class="form-group">
-            <label for="name" name="name">Username</label>
-            <input required type="text" name="name" id="name" class="form-control">
+<div class="container py-3">
+    <div class="row justify-content-center">
+        <div class="col-8 col-lg-4 col-md-6">
+            <h2>register</h2>
+            <form action="/user/register" method="POST">
+                <div class="form-group">
+                    <label for="name" name="name">username</label>
+                    <input required type="text" name="name" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email" name="email">email</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" name="password">password</label>
+                    <input type="password" required name="password" id="password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-outline-dark">register</button>
+                <a href="/" class="btn btn-outline-dark">cancel</a>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="email" name="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="password" name="password">Password</label>
-            <input type="password" required name="password" id="password" class="form-control">
-        </div>
-
-        <a href="/" class="btn btn-secondary">Cancel</a>
-
-        <button type="submit" class="btn btn-primary">Register</button>
-
     </div>
 </div>
-</form>

@@ -1,3 +1,4 @@
+/* MAIN HANDLEBARS/APPLIES TO ALL PAGES */
 html{
     height: 100%;
 }
@@ -11,21 +12,48 @@ body{
     font-family: 'Cutive Mono', monospace;
 }
 
-#content{
-    height: 100%;
-}
-
+/* HOMEPAGE ONLY */
 #home-bg-img{
     height: 100%;
 }
 
-.highlight-the-post{
+/* LINKS & HOVERS FOR ALL PAGES*/
+.link, #logout-link{
     color: black;
 }
 
-.highlight-the-post:hover{
-    color: rgb(235, 235, 47);
+.link:hover{
+    color: rgb(252, 252, 16);
 }
+
+#logout-link:hover{
+    color: lavender;
+    text-decoration: none;
+}
+
+.navig-link{
+    color: rgb(25, 143, 117);
+}
+
+.navig-link:hover{
+    background-color: rgb(10, 82, 66);
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.delete-link{
+    color: rgb(219, 48, 134);
+}
+
+.delete-link:hover{
+    color: rgb(221, 25, 90);
+}
+
+/* IMG */
+#detail-pg-img{
+    max-width: 90%;
+}
+
 
 /* h1{
     font-size: medium;
@@ -82,7 +110,6 @@ body{
     background-color: #2196F3;
 } */
 
-/* focus -- may want to use this. */
 /* input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
 } */

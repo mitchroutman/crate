@@ -23,5 +23,10 @@
       "name": "Blake",
       "email": "the_blake@yahoo.com",
       "password": "password12345"
+    },
+    {
+      "name": "funkyhomosapien",
+      "email": "priscilla@aim.com",
+      "password": "password12345"
     }
   ]

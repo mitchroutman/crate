@@ -1,15 +1,18 @@
-<h1 style="text-align: center"> Seeking </h1>
-
-{{#each seeks as |seek|}}
-<div class="card my-4">
-  <div class="card-body">
-    <h5 class="card-title">{{album_name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{artist}}</h6>
-    <p class="card-text">{{description}}</p>
-    <p class="card-text">{{user.name}}</p>
-    <p class="card-text">{{format_date createdAt}}</p>
-    <a href="/seek/{{id}}" class="btn btn-secondary">View</a>
-    {{!-- <a href="#" class="card-link">Another link</a> --}}
+<div class="container py-3">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 bg-light mb-3 py-2 px-3" style="opacity: 0.8">
+      <h3 class="py-2" style="color: rgb(43, 238, 43)">seeking for...</h3>
+        {{#each seeks as |seek|}}
+          <div>
+            <a class="link" href="/seek/{{id}}">
+              <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
+            </a>
+            <p>{{format_date createdAt}}</p>
+          </div>
+        {{/each}}
+    </div>
+    <div class="col-lg-6 col-md-6 mb-3">
+      <img class="img-fluid" src="/images/person.jpeg" alt="person holding record over face">
+    </div>
   </div>
 </div>
-{{/each}}

@@ -9,13 +9,13 @@ router.get('/', async (req, res) => {
   const salesObj = await Sale.findAll({ order: [["id", "DESC"]], include: [{ model: User }]});
   const sales = salesObj.map((sale) => sale.get({ plain:true }));
 
-  const reqObj = await Request.findAll({ order: [["id", "DESC"]], include: [{ model: User }]});
-  const requests = reqObj.map((request) => request.get({ plain:true }));
+  const seekObj = await Request.findAll({ order: [["id", "DESC"]], include: [{ model: User }]});
+  const seeks = seekObj.map((seek) => seek.get({ plain:true }));
 
   const loggedIn = req.session.loggedIn
   const username = req.session.username
 
-  res.render('homepage', { sales, requests, loggedIn, username });
+  res.render('homepage', { sales, seeks, loggedIn, username });
 });
 
 router.get('/404', (req, res) => {

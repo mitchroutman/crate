@@ -1,5 +1,5 @@
-{{!-- BACKGROUND IMAGE --}}
-<div id="home-bg-img" style="background-image: url(images/999record.jpeg); background-size: cover;">
+{{!-- CONTAINER & BACKGROUND IMAGE --}}
+<div id="home-bg-img" class="container my-4" style="background-image: url(images/999record.jpeg); background-size: cover;">
   {{!-- GREETING --}}
   {{#if loggedIn}}
     <h3 class="my-3">hey, {{username}}</h3>
@@ -7,10 +7,10 @@
   {{!-- MAIN CONTENT --}}
   <div class="row justify-content-around">
     <div class="col-lg-5 bg-white my-3 py-2" style="opacity: 0.7">
-      <h3 class="py-3">DIGS</h3>
+      <h3 class="py-3">latest digs</h3>
       {{#each sales as |sale|}}
         <div>
-          <a class="highlight-the-post" href="/find/{{id}}">
+          <a class="link" href="/find/{{id}}">
             <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
           </a>
           <p>{{format_date createdAt}}</p>
@@ -18,10 +18,10 @@
       {{/each}}
     </div>
     <div class="col-lg-5 bg-white my-3 py-2" style="opacity: 0.7">
-      <h3 class="py-3">SEEKING</h3>
-        {{#each requests as |request|}}
+      <h3 class="py-3">latest seeking</h3>
+        {{#each seeks as |seek|}}
           <div>
-            <a class="highlight-the-post" href="/seek/{{id}}">
+            <a class="link" href="/seek/{{id}}">
               <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
             </a>
             <p>{{format_date createdAt}}</p>
