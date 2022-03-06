@@ -33,7 +33,12 @@ router.get('/:id', async (req, res) => {
         showComment = true
     }
 
-    res.render('single-seek', {seek, loggedIn, comments, showComment})
+    let showImage = true
+    if (seek.photo.length === 0) {
+        showImage = false
+    }
+
+    res.render('single-seek', {seek, loggedIn, comments, showComment, showImage})
 })
 
 // localhost:3001/seek/update/:id
