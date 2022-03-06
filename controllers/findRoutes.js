@@ -9,12 +9,14 @@ router.get('/', async (req, res) => {
       // Send the rendered Handlebars.js template back as the response
   const salesObj = await Sale.findAll({order: [["id", "DESC"]], include: [{ model: User }]});
   const sales = salesObj.map((sale) => sale.get({ plain:true }));
-  res.render('find', {sales});
+  const loggedIn = req.session.loggedIn;
+  res.render('find', {sales, loggedIn });
 })
 
 // localhost:3001/find/new -- MAKE A 'SALE' POST: this is the form page.
 router.get('/new', withAuth, (req, res) => {
-    res.render('find-new')
+    const loggedIn = req.session.loggedIn;
+    res.render('find-new', {loggedIn})
 });
 
 // localhost:3001/find/:id -- single find -- more in depth page.
@@ -22,15 +24,17 @@ router.get('/:id', async (req, res) => {
     id = req.params.id;
     const saleObj = await Sale.findOne({where: { id }, include: [{ model: User }]}) 
     const sale = saleObj.get({ plain:true });
+    const loggedIn = req.session.loggedIn;
     // console.log(sale)
-    res.render('single-find', {sale})
+    res.render('single-find', {sale, loggedIn})
 });
 
 // localhost:3001/find/update/:id
 router.get('/update/:id', withAuth, async (req, res) => {
     const findUpdate = await Sale.findOne({where: { id: req.params.id }})
     const find = findUpdate.get({ plain: true })
-    res.render('find-update', {find})
+    const loggedIn = req.session.loggedIn;
+    res.render('find-update', {find, loggedIn})
 });
 
 

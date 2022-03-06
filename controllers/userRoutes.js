@@ -6,12 +6,14 @@ const router = require('express').Router();
 
 // localhost:3001/user/login
 router.get('/login', (req, res) => {
-    res.render('login')
+    const loggedIn = req.session.loggedIn;
+    res.render('login', {loggedIn})
 })
 
 // localhost:3001/user/register
 router.get('/register', (req, res) => {
-    res.render('register')
+    const loggedIn = req.session.loggedIn;
+    res.render('register', {loggedIn})
 })
 
 //register new user in db
