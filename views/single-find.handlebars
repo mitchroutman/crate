@@ -15,6 +15,31 @@
       <p>{{sale.description}}</p>
       <p>posted by {{sale.user.name}}</p>
       <p>on {{format_date sale.createdAt}}</p>
+
+      {{!-- Start Comments and Form --}}
+      <br>
+      <br>
+      {{#if showComment}}
+      <p  style="font-weight: bold"> Comments </p>
+      {{/if}}
+      {{#each comments as |comment|}}
+      <div>
+        <p>{{comment.user.name}} - {{format_date comment.createdAt}}</p>
+        <p>{{comment.comment}}</p>
+      </div>
+      <br>
+      {{/each}}
+
+      <form action="/find/comment/{{sale.id}}" method="POST">
+        <div class="form-group">
+          <label style="font-weight: bold" for="comment" name="comment">Comment</label>
+          <textarea required type="text" name="comment" id="comment" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-dark">Comment</button>
+        {{!-- <a href="/" class="btn btn-outline-dark">cancel</a> --}}
+      </form>
+
+      {{!-- END Comments and Form --}}
     </div>
   </div>
 </div>
