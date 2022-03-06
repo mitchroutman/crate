@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>crate ❒</title>
+    <title>crate</title>
     <link rel="icon" type="image/x-icon" href="images/large.png">
     {{!-- BOOTSTRAP CSS --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -31,41 +31,31 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/find">Dig</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/find">DIG</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/seek">Seek</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/seek">SEEK</a>
                     </li>
-                    {{#if loggedIn}}
-                    <li class="nav-item active">
-                        <form action="/user/logout" method="POST">
-                            <button type="submit" class="nav-link" id="logout-link">Logout</button>
-                        </form>
-                    </li>
-                    {{else}}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/user/login">Login</a>
-                    </li>
-                    {{/if}}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/user/register">Register</a>
-                    </li>
-                    <li class="nav-item dropdown active">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Create New
+                            New Post
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/find/new">Sell</a>
-                            <a class="dropdown-item" href="/seek/new">Seek</a>
+                            <a class="dropdown-item" href="/find/new">Make A Listing</a>
+                            <a class="dropdown-item" href="/seek/new">･ﾟ✧ Wishing For ✧ﾟ･</a>
                         </div>
                     </li>
                 </ul>
-                {{!-- <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> --}}
+                <a class="px-3 navig-link" href="/user/register">register</a>
+                {{#if loggedIn}}
+                <form action="/user/logout" method="POST">
+                    <button type="submit" class="btn btn-link" id="logout-link">logout</button>
+                </form>
+                {{else}}
+                <a class="px-3 navig-link" href="/user/login">login</a>
+                {{/if}}
             </div>
         </nav>
         {{!-- <div class="jumbotron jumbotron-fluid">
@@ -75,10 +65,9 @@
             </div>
         </div> --}}
     </header>
-    <div id="content" class="container my-4">
+    
         {{{body}}}
-    </div>
-
+        
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
