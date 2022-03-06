@@ -9,7 +9,7 @@
       <form action="update/{{seek.id}}" method="GET" class="d-inline">
         <button class="btn btn-link link">edit</button>
       </form>
-      <form action="/find/{{seek.id}}?_method=DELETE" method="POST" class="d-inline">
+      <form action="/seek/{{seek.id}}?_method=DELETE" method="POST" class="d-inline">
         <button class="btn btn-link delete-link">delete</button>
       </form>
     </div>
@@ -17,40 +17,33 @@
       <p>{{seek.description}}</p>
       <p>posted by {{seek.user.name}}</p>
       <p>on {{format_date seek.createdAt}}</p>
-
-      {{!-- START COMMENTS AND FORM --}}
-      <br>
-      <br>
-      {{#if showComment}}
-      <p  style="font-weight: bold"> Comments </p>
-      {{/if}}
-      {{#each comments as |comment|}}
-      <div>
-        <p>{{comment.user.name}} - {{format_date comment.createdAt}}</p>
-        <p>{{comment.comment}}</p>
-      </div>
-      <br>
-      {{/each}}
-
-      <form action="/seek/comment/{{seek.id}}" method="POST">
-        <div class="form-group">
-          <label style="font-weight: bold" for="comment" name="comment">Comment</label>
-          <textarea required type="text" name="comment" id="comment" class="form-control"></textarea>
-        </div>
-        <button type="submit" class="btn btn-outline-dark">Comment</button>
-        {{!-- <a href="/" class="btn btn-outline-dark">cancel</a> --}}
-      </form>
-
-      {{!-- END COMMENTS AND FORM --}}
     </div>
   </div>
-</div>
-
-
-{{!-- {{#each comments as |comment|}}
-<div class="card">
-  <div class="card-body">
-    <h6 class="card-title">{{comment.comment}}</h6>
+  {{!-- COMMENTS, IF SHOWN --}}
+  <div class="row justify-content-center">
+    <div class="col-lg-8 my-2">
+      {{#if showComment}}
+      <h5 class="text-center py-3" style="font-weight: bold;">comments</h5>
+      {{/if}}
+      {{#each comments as |comment|}}
+      <div class="col py-2">
+        <p>{{comment.user.name}} said: {{comment.comment}}</p>
+        <p>{{format_date comment.createdAt}}</p>
+      </div>
+      {{/each}}
+    </div>
   </div>
+  {{!-- comment form, always shown --}}
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-7 col-8 my-3">
+      <form action="/seek/comment/{{seek.id}}" method="POST">
+        <div class="form-group">
+          <label for="comment" name="comment">say somethin</label>
+          <textarea required type="text" name="comment" id="comment" class="form-control" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-dark">post</button>
+      </form>
+    </div>
+  </div>
+{{!-- close container enclosing all context on this page. --}}
 </div>
-{{/each}} --}}
