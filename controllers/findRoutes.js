@@ -33,7 +33,12 @@ router.get('/:id', async (req, res) => {
         showComment = true
     }
 
-    res.render('single-find', {sale, loggedIn, comments, showComment})
+    let showImage = true
+    if (sale.photo.length === 0) {
+        showImage = false
+    }
+
+    res.render('single-find', {sale, loggedIn, comments, showComment, showImage})
 });
 
 // localhost:3001/find/update/:id
