@@ -1,30 +1,37 @@
 [
-    {
-      "album_name": "Dr Octageinocologist",
-      "artist": "Dr Octagon",
-      "description": "One of the many strange kool keith aliases",
-      "photo": "https://img.discogs.com/bVzLvepJvSp1lS_2CGaF4H6aM4Y=/fit-in/600x579/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-10334222-1510671240-8820.jpeg.jpg",
-      "user_id": 1
-    },
-    {
-        "album_name": "Black Star",
-        "artist": "Black Star",
-        "description": "The Classic",
-        "photo": "https://upload.wikimedia.org/wikipedia/en/3/33/MosDef%26TalibKweliBlackStar.jpg",
-        "user_id": 2
-    },
-    {
-        "album_name": "Enter the 36 Chambers",
-        "artist": "Wu-Tang",
-        "description": "Aw yeaaaaa, again and again",
-        "photo": "https://upload.wikimedia.org/wikipedia/en/5/53/Wu-TangClanEntertheWu-Tangalbumcover.jpg",
-        "user_id": 1
-    },
-    {
-      "album_name": "Rumors",
-      "artist": "Fleetwood Mac",
-      "description": "You know it",
-      "photo": "https://m.media-amazon.com/images/I/71BekDJBb3L._SL1425_.jpg",
-      "user_id": 1
-    }
-  ]
+  {
+    "album_name": "Dr Octageinocologist",
+    "artist": "Dr Octagon",
+    "description": "One of the many strange kool keith aliases",
+    "photo": "https://m.media-amazon.com/images/I/713fVVO95tL._SL1200_.jpg",
+    "user_id": 1
+  },
+  {
+    "album_name": "Black Star",
+    "artist": "Black Star",
+    "description": "The Classic. hmu",
+    "photo": "https://img.discogs.com/rjMukYhd9vDcqgr8G1CDQThWuf4=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6094895-1630339547-7906.jpeg.jpg",
+    "user_id": 2
+  },
+  {
+    "album_name": "Enter the 36 Chambers",
+    "artist": "Wu-Tang",
+    "description": "Aw yeaaaaa, again and again",
+    "photo": "https://m.media-amazon.com/images/I/71Q2D-XDOaL._SL1200_.jpg",
+    "user_id": 1
+  },
+  {
+    "album_name": "Rumors",
+    "artist": "Fleetwood Mac",
+    "description": "Love this album sm. can someone pls lmk if they have it for a good price 🥺",
+    "photo": "https://m.media-amazon.com/images/I/71HWqbh0BLL._SL1425_.jpg",
+    "user_id": 1
+  },
+  {
+    "album_name": "GOBLIN",
+    "artist": "TYLER, THE CREATOR",
+    "description": "I'd really appreciate if someone could help me secure this vinyl so I could spiritually transport back to 2011",
+    "photo": "https://m.media-amazon.com/images/I/61dWF4b9O3L.jpg",
+    "user_id": 6
+  }
+]

@@ -3,21 +3,28 @@
       "album_name": "Deltron 3030",
       "artist": "Deltron 3030",
       "description": "A vintage pressing in terrible condition",
-      "photo": "https://upload.wikimedia.org/wikipedia/en/7/7e/Deltron_3030_%28album_cover%29.jpg",
+      "photo": "https://cdn.shopify.com/s/files/1/0882/5118/products/Deltron-3030-Deltron-3030-Exclusive-Color-Vinyl-LP-2510853-1_1024x1024.jpg?v=1616681175",
       "user_id": 1
     },
     {
         "album_name": "Black on Both Sides",
         "artist": "Mos Def",
-        "description": "A fire album but we're all still waiting for BlackStar 2",
-        "photo": "https://m.media-amazon.com/images/I/61A-tGJmm2L._SL1200_.jpg",
+        "description": "A fire album, but we're all still waiting for Black Star II",
+        "photo": "https://www.amoeba.com/sized-images/max/800/800/uploads/albums/covers/other//MosDef_BlackOnBothSides_A.jpg",
         "user_id": 2
     },
     {
         "album_name": "The Cold Vein",
         "artist": "Cannibal Ox",
         "description": "That El-P joint that everybody forgot exists",
-        "photo": "https://upload.wikimedia.org/wikipedia/en/f/fd/CannibalOxTheColdVein.jpg",
+        "photo": "https://www.amoeba.com/sized-images/max/800/800/uploads/albums/covers/by_title/T/cannibalox_coldvein.jpg",
         "user_id": 1
+    },
+    {
+      "album_name": "Reachin’ (A New Refutation of Time and Space)",
+      "artist": "DIGABLE PLANETS",
+      "description": "Love this album. Anybody would b lucky to have these tunes hit they ears",
+      "photo": "https://light-in-the-attic.s3.amazonaws.com/uploads/release_image/21434/image/tmp_2F1512513561238-8avux3squ4t-f560953555f9636be556e04fd4437e4a_2FMCR924_Cover.jpg",
+      "user_id": 6
     }
   ]
