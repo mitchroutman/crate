@@ -8,12 +8,14 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   const seekObj = await Request.findAll({ order:[[ "id", "DESC"]], include: [{ model: User}]});
   const seeks = seekObj.map((seek) => seek.get({ plain:true }));
-  res.render('seek', {seeks});
+  const loggedIn = req.session.loggedIn;
+  res.render('seek', {seeks, loggedIn});
 })
 
 // localhost:3001/seek/new -- MAKE A NEW 'SEEK' POST: form page.
 router.get('/new', withAuth, (req, res) => {
-    res.render('seek-new')
+    const loggedIn = req.session.loggedIn;
+    res.render('seek-new', {loggedIn})
 })
 
 // localhost:3001/seek/:id -- single seek -- more in depth page.
@@ -21,15 +23,17 @@ router.get('/:id', async (req, res) => {
     id = req.params.id;
     const seekObj = await Request.findOne({where: { id }, include: [{ model: User}]}) 
     const seek = seekObj.get({ plain:true })
+    const loggedIn = req.session.loggedIn;
     // console.log(seeks)
-    res.render('single-seek', {seek})
+    res.render('single-seek', {seek, loggedIn})
 })
 
 // localhost:3001/seek/update/:id
 router.get('/update/:id', withAuth, async (req, res) => {
     const seekUpdate = await Request.findOne({where: { id: req.params.id }})
     const seek = seekUpdate.get({ plain: true })
-    res.render('seek-update', {seek})
+    const loggedIn = req.session.loggedIn;
+    res.render('seek-update', {seek, loggedIn})
 })
 
 

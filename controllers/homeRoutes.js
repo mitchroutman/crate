@@ -19,7 +19,8 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/404', (req, res) => {
-  res.render('404');
+  const loggedIn = req.session.loggedIn;
+  res.render('404', {loggedIn});
 })
 
 module.exports = router;
