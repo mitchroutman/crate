@@ -20,9 +20,9 @@ router.get('/new', withAuth, (req, res) => {
 router.get('/:id', async (req, res) => {
     id = req.params.id;
     const seekObj = await Request.findOne({where: { id }, include: [{ model: User}]}) 
-    const seeks = seekObj.get({ plain:true })
+    const seek = seekObj.get({ plain:true })
     // console.log(seeks)
-    res.render('single-seek', {seeks})
+    res.render('single-seek', {seek})
 })
 
 // localhost:3001/seek/update/:id
