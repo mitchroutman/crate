@@ -1,16 +1,18 @@
-<h1 style="text-align: center"> All Digs </h1>
-
-{{#each sales as |sale|}}
-<div class="card my-4">
-  <div class="card-body">
-    <h5 class="card-title">{{album_name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{artist}}</h6>
-    <p class="card-text">{{description}}</p>
-    <p class="card-text">user: {{user.name}}</p>
-     <p class="card-text">Created: {{format_date createdAt}}</p>
-    
-    <a href="/find/{{id}}" class="btn btn-secondary">View</a>
-    {{!-- <a href="#" class="card-link">Another link</a> --}}
+<div class="container py-3">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 mb-3">
+      <img class="img-fluid" src="/images/cubby.jpeg" alt="cubby of records">
+    </div>
+    <div class="col-lg-6 col-md-6 bg-light mb-3 py-2 px-3" style="opacity: 0.8">
+      <h3 class="py-2" style="color: red;">DIG THRU</h3>
+        {{#each sales as |sale|}}
+          <div>
+            <a class="link" href="/find/{{id}}">
+              <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
+            </a>
+            <p>{{format_date createdAt}}</p>
+          </div>
+        {{/each}}
+    </div>
   </div>
 </div>
-{{/each}}
