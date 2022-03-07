@@ -13,7 +13,7 @@
           <a id="homelink" href="/find/{{id}}">
             <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
           </a>
-          <p>{{timeAgo createdAt}}</p>
+          <p>{{format_date createdAt}}</p>
         </div>
       {{/each}}
     </div>
@@ -24,7 +24,7 @@
             <a id="homelink" href="/seek/{{id}}">
               <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
             </a>
-            <p>{{timeAgo createdAt}}</p>
+            <p>{{format_date createdAt}}</p>
           </div>
         {{/each}}
     </div>

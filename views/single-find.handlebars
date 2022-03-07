@@ -16,7 +16,7 @@
     <div class="col-lg-5 col-md-6 my-3 py-3">
       <p>{{sale.description}}</p>
       <p>posted by {{sale.user.name}}</p>
-      <p>{{calendar sale.createdAt}}</p>
+      <p>{{format_date sale.createdAt}}</p>
     </div>
   </div>
   {{!-- COMMENTS, IF SHOWN --}}
@@ -28,7 +28,7 @@
       {{#each comments as |comment|}}
       <div class="col py-2">
         <p>{{comment.user.name}} said: {{comment.comment}}</p>
-        <p>{{timeAgo comment.createdAt}}</p>
+        <p>{{format_date comment.createdAt}}</p>
       </div>
       {{/each}}
     </div>
