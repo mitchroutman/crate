@@ -4,13 +4,13 @@
       <img class="img-fluid" src="/images/dj.jpeg" alt="dj controller">
     </div>
     <div class="col-lg-6 col-md-6 bg-light mb-3 py-2 px-3" style="opacity: 0.8">
-      <h3 class="py-3" style="color: rgb(143, 206, 43);">crate</h3>
+      <h3 class="py-3" style="color: rgb(26, 71, 65);">crate</h3>
         {{#each sales as |sale|}}
           <div class="py-1">
             <a class="link" href="/find/{{id}}">
               <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
             </a>
-            <p>{{format_date createdAt}}</p>
+            <p>{{march createdAt}}</p>
           </div>
         {{/each}}
     </div>

@@ -6,25 +6,25 @@
   {{/if}}
   {{!-- MAIN CONTENT --}}
   <div id="home-bg-img" class="row justify-content-around pb-4" style="background-image: url(/images/999record.jpeg); background-size: cover;">
-    <div class="col-lg-5 bg-white my-2 py-2" style="opacity: 0.7">
+    <div class="col-lg-5 bg-white my-2 py-2" style="opacity: 0.8">
       <h3 class="py-3">latest in the crate</h3>
       {{#each sales as |sale|}}
         <div class="py-1">
-          <a class="link" href="/find/{{id}}">
+          <a id="homelink" href="/find/{{id}}">
             <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
           </a>
-          <p>{{format_date createdAt}}</p>
+          <p>{{timeAgo createdAt}}</p>
         </div>
       {{/each}}
     </div>
-    <div class="col-lg-5 bg-white my-2 py-2" style="opacity: 0.7">
+    <div class="col-lg-5 bg-white my-2 py-2" style="opacity: 0.8">
       <h3 title="pick up the phone..." class="py-3">latest calls</h3>
         {{#each seeks as |seek|}}
           <div class="py-1">
-            <a class="link" href="/seek/{{id}}">
+            <a id="homelink" href="/seek/{{id}}">
               <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
             </a>
-            <p>{{format_date createdAt}}</p>
+            <p>{{timeAgo createdAt}}</p>
           </div>
         {{/each}}
     </div>

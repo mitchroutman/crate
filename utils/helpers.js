@@ -7,5 +7,12 @@ module.exports = {
 
     timeAgo: (time) => {
         return moment(time).startOf('hour').fromNow();
+        // return moment(time).calendar();
+    },
+    calendar: (time) => {
+        return moment(time).calendar();
+    },
+    march: (time) => {
+        return moment(time).format('L');
     }
 };
