@@ -7,9 +7,9 @@
   {{!-- MAIN CONTENT --}}
   <div class="row justify-content-around">
     <div class="col-lg-5 bg-white my-3 py-2" style="opacity: 0.7">
-      <h3 class="py-3">latest digs</h3>
+      <h3 class="py-3">latest in the crate</h3>
       {{#each sales as |sale|}}
-        <div>
+        <div class="py-1">
           <a class="link" href="/find/{{id}}">
             <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
           </a>
@@ -18,9 +18,9 @@
       {{/each}}
     </div>
     <div class="col-lg-5 bg-white my-3 py-2" style="opacity: 0.7">
-      <h3 class="py-3">latest seeking</h3>
+      <h3 title="pick up the phone..." class="py-3">latest calls</h3>
         {{#each seeks as |seek|}}
-          <div>
+          <div class="py-1">
             <a class="link" href="/seek/{{id}}">
               <p>{{album_name}} by {{artist}} posted by {{user.name}}</p>
             </a>
