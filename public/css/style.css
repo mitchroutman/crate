@@ -17,6 +17,14 @@ body{
     height: 100%;
 }
 
+#homelink{
+    color: black;
+}
+
+#homelink:hover{
+    color: rgb(248, 8, 100);
+}
+
 /* LINKS & HOVERS FOR ALL PAGES*/
 .link, #logout-link{
     color: black;
@@ -32,7 +40,7 @@ body{
 }
 
 .navig-link{
-    color: rgb(25, 143, 117);
+    color: rgb(7, 66, 53);
 }
 
 .navig-link:hover{
@@ -42,11 +50,11 @@ body{
 }
 
 .delete-link{
-    color: rgb(219, 48, 134);
+    color: rgb(131, 13, 72);
 }
 
 .delete-link:hover{
-    color: rgb(221, 25, 90);
+    color: rgb(88, 10, 49);
 }
 
 /* IMG */
