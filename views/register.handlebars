@@ -1,8 +1,8 @@
 <div class="container py-3">
     <div class="row justify-content-center">
-        <div class="col-8 col-lg-4 col-md-6">
-            <h2>register</h2>
-            <form action="/user/register" method="POST">
+        <div class="col-8 col-lg-4 col-md-6 py-3">
+            <h2>new user</h2>
+            <form class="my-3" action="/user/register" method="POST">
                 <div class="form-group">
                     <label for="name" name="name">username</label>
                     <input required type="text" name="name" id="name" class="form-control">
@@ -12,10 +12,10 @@
                     <input type="email" name="email" id="email" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="password" name="password">password</label>
+                    <label for="password" name="password">password <span class="text-muted">&nbsp;min 7 characters</span></label>
                     <input type="password" required name="password" id="password" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-outline-dark">register</button>
+                <button type="submit" class="btn btn-outline-dark">sign up</button>
                 <a href="/" class="btn btn-outline-dark">cancel</a>
             </form>
         </div>

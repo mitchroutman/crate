@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRATE</title>
+    <title>crate</title>
     <link rel="icon" type="image/x-icon" href="/images/vinyl.png">
     {{!-- BOOTSTRAP CSS --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -32,23 +32,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/find">DIG</a>
+                        <a class="nav-link active" href="/find">DIG</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/seek">SEEK</a>
+                        <a class="nav-link active" href="/seek">SEEK</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            New Post
+                            new post
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/find/new">Make A Listing</a>
-                            <a class="dropdown-item" href="/seek/new">･ﾟ✧ Wishing For ✧ﾟ･</a>
+                            <a class="dropdown-item" href="/find/new">add to the crate</a>
+                            <a class="dropdown-item" href="/seek/new">make a call ･ﾟ✧</a>
                         </div>
                     </li>
                 </ul>
-                <a class="px-3 navig-link" href="/user/register">register</a>
+                <a class="px-3 navig-link" href="/user/register">sign up</a>
                 {{#if loggedIn}}
                 <form action="/user/logout" method="POST">
                     <button type="submit" class="btn btn-link" id="logout-link">logout</button>
