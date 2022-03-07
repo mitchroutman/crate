@@ -1,12 +1,12 @@
 {{!-- CONTAINER & BACKGROUND IMAGE --}}
-<div id="home-bg-img" class="container my-4" style="background-image: url(/images/999record.jpeg); background-size: cover;">
+<div class="container my-4">
   {{!-- GREETING --}}
   {{#if loggedIn}}
-    <h3 class="my-3">hey, {{username}}</h3>
+    <h3 class="my-1">hey, {{username}}</h3>
   {{/if}}
   {{!-- MAIN CONTENT --}}
-  <div class="row justify-content-around">
-    <div class="col-lg-5 bg-white my-3 py-2" style="opacity: 0.7">
+  <div id="home-bg-img" class="row justify-content-around pb-4" style="background-image: url(/images/999record.jpeg); background-size: cover;">
+    <div class="col-lg-5 bg-white my-2 py-2" style="opacity: 0.7">
       <h3 class="py-3">latest in the crate</h3>
       {{#each sales as |sale|}}
         <div class="py-1">
@@ -17,7 +17,7 @@
         </div>
       {{/each}}
     </div>
-    <div class="col-lg-5 bg-white my-3 py-2" style="opacity: 0.7">
+    <div class="col-lg-5 bg-white my-2 py-2" style="opacity: 0.7">
       <h3 title="pick up the phone..." class="py-3">latest calls</h3>
         {{#each seeks as |seek|}}
           <div class="py-1">
