@@ -54,6 +54,11 @@ body{
     max-width: 90%;
 }
 
+/* TEXTAREA */
+textarea{
+    /* resize none removes the option to adjust the text box size. */
+    resize: none;
+}
 
 /* h1{
     font-size: medium;

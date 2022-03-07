@@ -3,10 +3,8 @@ const Sale = require('./Sale');
 const Request = require('./Request');
 const Comment = require('./Comment');
 
-//Export your models so that it can be required in the server.js
-// and/or routes files
+// Associations
 
-//Associations
 User.hasMany(Sale, {
     foreignKey: "user_id"
 });
@@ -23,7 +21,8 @@ Request.belongsTo(User, {
     foreignKey: "user_id"
 });
 
-//associations for Comments
+
+// Associations for COMMENTS
 
 Comment.belongsTo(User, {
     foreignKey: 'user_id'
@@ -48,7 +47,6 @@ Comment.belongsTo(Request, {
 Request.hasMany(Comment, {
     foreignKey: 'request_id'
 });
-
 
 
 module.exports = { User, Sale, Request, Comment };
